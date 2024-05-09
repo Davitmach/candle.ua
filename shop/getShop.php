@@ -23,7 +23,7 @@ $itemsPerPage = 6;
         <div class="Product_box">
        <div class="Img_container">
        <div class="Img_box"><img src='.$row['img'].'></div>
-       <div class="Add_cart_btn"><button id="Add_cart_btn" data-id='.$row['id'].'>ADD TO CART</button></div>
+       <div class="Add_cart_btn"><button id="Add_to_cart" data-id='.$row['id'].'>ADD TO CART</button></div>
        </div>
        <div class="Info_box">
        <div id="Title_box"><h1 data-id='.$row['id'].' >'.$row['name'].'</h1></div>
