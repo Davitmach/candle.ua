@@ -21,7 +21,7 @@ if($_POST['status'] == 'lh') {
 
     // Fetch products for the current page
     $sql = mysqli_query($connect, "SELECT * FROM `product` ORDER BY `price` ASC LIMIT $start, $itemsPerPage");
-    while($row = mysqli_fetch_assoc($sql)) {
+    while($row = mysqli_fetch_assoc($sql)) {    
         echo '
         <div class="Product_box">
        <div class="Img_container">
@@ -30,7 +30,7 @@ if($_POST['status'] == 'lh') {
        </div>
        <div class="Info_box">
        <div id="Title_box"><h1 data-id='.$row['id'].' >'.$row['name'].'</h1></div>
-       <div class="Price_box"><span>'.$row['price'].'</span></div>
+       <div class="Price_box"><span>$'.$row['price'].'.00</span></div>
        </div>
         </div>
         ';
@@ -63,7 +63,7 @@ else if($_POST['status'] == 'hl') {
        </div>
        <div class="Info_box">
        <div id="Title_box"><h1 data-id='.$row['id'].' >'.$row['name'].'</h1></div>
-       <div class="Price_box"><span>'.$row['price'].'</span></div>
+       <div class="Price_box"><span>$'.$row['price'].'.00</span></div>
        </div>
         </div>
         ';
@@ -96,7 +96,7 @@ else {
        </div>
        <div class="Info_box">
        <div id="Title_box"><h1 data-id='.$row['id'].' >'.$row['name'].'</h1></div>
-       <div class="Price_box"><span>'.$row['price'].'</span></div>
+       <div class="Price_box"><span>$'.$row['price'].'.00</span></div>
        </div>
         </div>
         ';

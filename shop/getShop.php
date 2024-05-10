@@ -27,10 +27,11 @@ $itemsPerPage = 6;
        </div>
        <div class="Info_box">
        <div id="Title_box"><h1 data-id='.$row['id'].' >'.$row['name'].'</h1></div>
-       <div class="Price_box"><span>'.$row['price'].'</span></div>
+       <div class="Price_box"><span>$'.$row['price'].'.00</span></div>
        </div>
         </div>
         ';
+    
     }
     
 
