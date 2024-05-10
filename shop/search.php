@@ -23,7 +23,6 @@ $itemsPerPage = 6;
     // Fetch products for the current page
    
     $sql = mysqli_query($connect, "SELECT * FROM `product`WHERE `name` LIKE '%$search%' OR `price` LIKE '%$search%' OR 'tags' LIKE '%$search%' LIMIT $start, $itemsPerPage ");
-   if(mysqli_num_rows($sql) >0) {
     while($row = mysqli_fetch_assoc($sql)) {
         echo '
         <div class="Product_box">
@@ -38,7 +37,4 @@ $itemsPerPage = 6;
         </div>
         ';
     }
-   }
- else {
-    echo "<h1>The product's is empty</h1>";
- }
+   
